@@ -72,8 +72,10 @@ function move (newY, newX) {
       console.log("blockMål",  (player_Y+blockY), (player_X+blockX));
 
      //något fel här
-      document.getElementById("y" + (player_Y+blockY) + "x" + (player_X+blockX)).classList.add("player");
-
+      var test = document.getElementById("y" + (player_Y+blockY) + "x" + (player_X+blockX));
+      console.log(test);
+      test.classList.add("player");
+      console.log(test);
       console.log(player_X+newX++, player_X+newX++);
     }
 
