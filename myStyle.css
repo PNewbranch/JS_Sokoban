@@ -1,0 +1,33 @@
+
+/*en samling "classer" som används i JS
+  JS har dessutom en del "id" definierade*/
+
+/* div är urnoderb - de andra är också div (framgår inte av namnet dock, se js-fil*/
+.divBox { 
+  background-color: rgb(247, 232, 150);
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+.wall {
+  background-color: red;
+}
+
+.block {
+  background-color: pink;
+}
+
+.player {
+  background-color: yellow;
+  position: y=100px ,x=0px;
+}
+
+.goalArea {
+  background-color: green;
+}
+
+.space {
+  background-color: black;
+}
+

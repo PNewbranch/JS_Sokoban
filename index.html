@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- koppling till css-filen -->
+    <link rel="stylesheet" href="myStyle.css" />
+
+    <!-- skapa referens till dokumentet/html.sidan "Document", "ägaren" av alla objekt-->
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <button onclick="move(-1, 0)">Gå upp</button>
+    <button onclick="move(+1, 0)">Gå ner</button>
+    <button onclick="move(0, -1)">Gå vänster</button>
+    <button onclick="move(0, +1)">Gå höger</button>
+   
+    <!-- sätt ett "id" på h1:an i html - ID:t sätts i JS-filen -->
+    <h1 id="welcomeH1">Hello Coders</h1> 
+
+    <!-- sätt ett "id" på hela DIV-sektionen i html - ID:t sätts i JS-filen -->
+    <div id="myDiv">
+      <h2>Sub title</h2>  <!-- JS skriver över denna rad med ett rutmönster -->
+    </div>
+
+    <!-- kör javascriptet -->    
+    <script src="SokobanBase.js"></script> 
+    <script src="myJavaScript.js"></script> 
+  </body>
+
+</html>
