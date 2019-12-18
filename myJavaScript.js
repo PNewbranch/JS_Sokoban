@@ -21,7 +21,7 @@ console.log(myDiv);
 
 for (let y = 0; y < 16; y++) { //gå igenom griden, denna kod KÖRS EN GÅNG!!
   for (let x = 0; x < 19; x++) {
-    const element = document.createElement("div");//skapa en ny instans av classen "liten ruta"
+    const element = document.createElement("div");//skapa en ny instans av classen "de små rutorna"
     element.className = "divBox";
 
     //lägg på en färg från html=W och CSS=.wall(class)
@@ -42,11 +42,14 @@ for (let y = 0; y < 16; y++) { //gå igenom griden, denna kod KÖRS EN GÅNG!!
   //logic if needed between rows
 }
 
+
 //här har vi spelaren - använder variavler som INITERAS i: else if "P"
 var elementPlayerIsNowOn = document.getElementById("y" + player_Y + "x" + player_X);
 
 console.log(elementPlayerIsNowOn);
 console.log(player_X, player_Y);
+
+
 
 function move (newY, newX) {
 
@@ -63,8 +66,7 @@ function move (newY, newX) {
     console.log(player_X+newX, player_X+newX);
 
     //flytta block om sådant finns, ett snäpp till i samma riktning
-    if (document.getElementById("y" + (player_Y+newY) + "x" + (player_X+newX)).classList.contains("block")) {
-
+    if (document.getElementById("y" + (player_Y+newY) + "x" + (player_X+newX)).classList.contains("block")) {   
       let blockY=newY*2;
       let blockX=newX*2;
       console.log("PlayerPos", player_Y, player_X);
