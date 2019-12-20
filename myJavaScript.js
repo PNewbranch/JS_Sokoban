@@ -69,6 +69,10 @@ function move (newY, newX) {
     if (document.getElementById("y" + (player_Y+newY) + "x" + (player_X+newX)).classList.contains("block")) {   
       let blockY=newY*2;
       let blockX=newX*2;
+      if(document.getElementById("y" + (player_Y+newY*2) + "x" + (player_X+newX*2)).classList.contains("block") 
+      {
+      }
+
       console.log("PlayerPos", player_Y, player_X);
       console.log("block", blockY, blockX);
       console.log("blockMål",  (player_Y+blockY), (player_X+blockX));
