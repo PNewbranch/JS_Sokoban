@@ -1,6 +1,5 @@
 "use strict"; //kör strikt kod = tydligare kod med mer felhantering 
-
-document.getElementById("welcomeH1").innerHTML = "Play SOKOBAN!"; //skriv i objektet "welcomeH1" (rubriken)
+document.getElementById("welcomeH1").innerHTML = "Play SOKOBAN!"; //skriv RUBRIK i objektet "welcomeH1" (rubriken)
 
 //ge bodyn en bakgrundsfärg = hämta element "body" och associera det till variabeln "myBody" - retur Ett objekt
 var myBody = document.getElementsByTagName("body")[0]; //tagname = returnerar lista
@@ -37,6 +36,15 @@ for (let y = 0; y < 16; y++) { //gå igenom griden, denna kod KÖRS EN GÅNG!!
 }
 
 var elementPlayerIsNowOn = document.getElementById("y" + player_Y + "x" + player_X);
+
+function checkIfArrow_IfSoMove(event) {
+  switch (event.keyCode) {
+    case 38: move(-1, 0); break;
+    case 40: move(+1, 0); break;
+    case 37: move(0, -1); break;
+    case 39: move(0, +1); break;
+  }
+}
 
 function move(newY, newX) { //indata från styrpanel
   if (document.getElementById("y" + (player_Y + newY) + "x" + (player_X + newX)).classList.contains("wall")) {
