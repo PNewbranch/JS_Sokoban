@@ -37,6 +37,7 @@ for (let y = 0; y < 16; y++) { //gå igenom griden, denna kod KÖRS EN GÅNG!!
 
 var elementPlayerIsNowOn = document.getElementById("y" + player_Y + "x" + player_X);
 
+//skapar indata till huvudfunktionen "move"
 function checkIfArrow_IfSoMove(event) {
   switch (event.keyCode) {
     case 38: move(-1, 0); break;
@@ -46,6 +47,10 @@ function checkIfArrow_IfSoMove(event) {
   }
 }
 
+//omstart
+function restartGame() {  location.reload(); }
+
+//huvudfunktion 
 function move(newY, newX) { //indata från styrpanel
   if (document.getElementById("y" + (player_Y + newY) + "x" + (player_X + newX)).classList.contains("wall")) {
     return;
@@ -82,5 +87,16 @@ function move(newY, newX) { //indata från styrpanel
     elementPlayerIsNowOn.classList.remove("space");
     elementPlayerIsNowOn.classList.remove("goalArea");
     elementPlayerIsNowOn.classList.add("player");
+  }
+
+  //meddela spelaren att denne vunnit
+  //Varför kan jag inte använda mapGridden till detta? OM? Hur? console.log(tileMap01.mapGrid[10][16].classList.value());
+   if ((document.getElementById("y" + (9) + "x" + (16)).classList.value=="divBox block") && 
+      (document.getElementById("y" + (9) + "x" + (17)).classList.value=="divBox block") && 
+      (document.getElementById("y" + (10) + "x" + (16)).classList.value=="divBox block") && 
+      (document.getElementById("y" + (10) + "x" + (17)).classList.value=="divBox block") && 
+      (document.getElementById("y" + (11) + "x" + (16)).classList.value=="divBox block") && 
+      (document.getElementById("y" + (11) + "x" + (17)).classList.value=="divBox block")) {
+       window.alert("This is the end... you won!");    
   }
 }
